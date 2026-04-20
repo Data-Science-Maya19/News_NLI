@@ -1,0 +1,26 @@
+scikit-learn>=1.4.0
+scipy>=1.13.0
+numpy>=1.26.0
+pandas>=2.2.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+python-box>=7.0.0
+PyYAML>=6.0
+tqdm>=4.66.0
+# plotly
+python-box>=7.0.0
+PyYAML>=6.0
+
+# PyTorch with CUDA 12.8 for RTX 5060 (Blackwell sm_120)
+--index-url https://download.pytorch.org/whl/cu128
+torch
+torchvision
+torchaudio
+-e .  # for local src/ package
+
+# HuggingFace
+# transformers
+# datasets
+# accelerate
+# evaluate
+# huggingface-hub
