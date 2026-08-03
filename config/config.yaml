@@ -1,0 +1,13 @@
+# Path configuration for the news_nli project.
+# These paths match exactly what research/01-03 notebooks already read from
+# and write to (as ../data, ../models, ../evaluation relative to research/).
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  splits_dir: data/splits
+  figures_dir: data/figures
+
+model_training:
+  models_dir: models
+  eval_dir: evaluation

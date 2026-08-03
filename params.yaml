@@ -1,0 +1,20 @@
+# Training hyperparameters for news_nli.
+# Values below match research/03_model_training_and_evaluation.ipynb exactly.
+
+EPOCHS: 5
+BATCH_SIZE: 16
+LEARNING_RATE: 2.0e-5    # default LR for all models
+MDEBERTA_LR: 1.0e-5      # mDeBERTa-v3 needs a lower LR; 2e-5 with fp16 causes loss=nan
+MAX_LENGTH: 128
+WARMUP_RATIO: 0.1
+SEED: 42
+
+# Models actually trained in the current experiment (research/03):
+MODELS_TO_TRAIN:
+  mbert: google-bert/bert-base-multilingual-cased
+  xlmr: FacebookAI/xlm-roberta-base
+
+# Additional models scaffolded but not yet trained (commented out in the
+# notebook) — uncomment there when ready to include them:
+#   infoxlm:  microsoft/infoxlm-base
+#   mdeberta: microsoft/mdeberta-v3-base

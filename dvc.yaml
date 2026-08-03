@@ -1,0 +1,39 @@
+# DVC pipeline definition — PLACEHOLDER.
+#
+# DVC is not yet initialized in this project (no `dvc init` has been run,
+# no .dvc/ folder exists). This file sketches the pipeline stages that
+# would mirror the current research notebooks, for whenever the project
+# is ready to move from notebooks to a tracked, reproducible pipeline.
+#
+# To activate:
+#   1. pip install dvc
+#   2. dvc init
+#   3. Convert the relevant notebook cells into scripts under src/news_nli/components/
+#   4. Update the "cmd" lines below to call those scripts
+#   5. dvc repro
+
+stages:
+  data_cleaning:
+    cmd: 'echo "TODO: convert research/01_data_cleaning.ipynb into a script and call it here"'
+    deps:
+      - data/raw
+    outs:
+      - data/processed
+
+  eda_and_split:
+    cmd: 'echo "TODO: convert research/02_eda_improved.ipynb into a script and call it here"'
+    deps:
+      - data/processed
+    outs:
+      - data/splits
+      - data/figures
+
+  train_and_evaluate:
+    cmd: 'echo "TODO: convert research/03_model_training_and_evaluation.ipynb into a script and call it here"'
+    deps:
+      - data/splits
+    params:
+      - params.yaml
+    outs:
+      - models
+      - evaluation
